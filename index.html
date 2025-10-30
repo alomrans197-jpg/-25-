@@ -68,12 +68,20 @@
       color: #800000;
       margin-bottom: 15px;
     }
-    .gallery img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      margin: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+   .gallery-grid img {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
     }
     footer {
       background-color: #000;
@@ -134,7 +142,27 @@
     line-height: 1.8;
     font-family: 'Amiri', serif;
   }
-   
+  
+    .gallery h2 {
+      font-size: 28px;
+      color: #800000;
+      margin-bottom: 20px;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    } 
   </style>
 </head>
 <body>
@@ -167,6 +195,19 @@
   <div class="marquee">
     <marquee direction="right" scrollamount="5">الإكساء والتشطيب • الترميم الهندسي • التعهدات العقارية • الديكور الداخلي</marquee>
   </div>
+  <section class="gallery">
+  <h2>معرض أعمالنا</h2>
+  <div class="gallery-grid">
+    <img src="https://i.ibb.co/21Tr23hQ/IMG-1.jpg" alt="رخام">
+    <img src="https://i.ibb.co/zhFcRQHs/IMG-1.jpg" alt="ديكور">
+    <img src="https://i.ibb.co/fdXvmtYW/IMG.jpg" alt="تشطيب">
+    <img src="https://i.ibb.co/ccNwFGDx/IMG.jpg" alt="ديكور داخلي">
+    <img src="https://i.ibb.co/vx78Lry2/IMG-1.jpg" alt="رخام خارجي">
+    <img src="https://i.ibb.co/4RzVWVJ7/IMG-1.jpg" alt="تشطيب فاخر">
+    <img src="https://i.ibb.co/dwkJ15NX/IMG.jpg" alt="تفاصيل ديكور">
+  </div>
+</section>
+
   <div class="services">
     <div class="card">
       <i class="fas fa-paint-roller"></i>
